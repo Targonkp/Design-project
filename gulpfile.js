@@ -61,7 +61,7 @@ const clear = () => {
     return del("./dist");
 }
 
-const watcher = () => {watch("./src/**/*.{html,css,js}", series(formatter, cssPrefix, css, html, js, img))}
+const watcher = () => {watch("./src/**/*.{html,css,js}", series(formatter, cssPrefix, css, js, img))}
 
 exports.dev = series(
     clear,
@@ -69,7 +69,6 @@ exports.dev = series(
     cssPrefix,
     css,
     js,
-    html,
     img,
     parallel(watcher, server)
 );
