@@ -83,6 +83,7 @@ header{
     text-transform: uppercase;
     color: #E3B873;
     margin: 0 115px 0 0;
+    animation: transform;
 }
 
 .header-menu{
@@ -105,6 +106,11 @@ header{
 .header-menu__link:hover{
     color:#E3B873;
     transition: 0.3s;
+}
+
+.header-menu__link.header-menu__link_active {
+    color: #e3da8c;
+    border-bottom: 1px solid #E3B873;
 }
 
 .header-phone{
@@ -1236,4 +1242,16 @@ footer{
 
 .burger-menu{
     display: none;
+}
+
+@keyframes transform {
+    30% {
+        transform: rotate(180deg) scale(0.7);
+    }
+    60% {
+        transform: rotate(360deg) scale(1.7);
+    }
+    90% {
+        transform: rotate(180deg) scale(0.3);
+    }
 }
